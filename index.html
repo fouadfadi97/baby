@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baby Clothes Store</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e5c8e6;
+            /* Updated background color */
+            overflow-x: hidden;
+            /* Prevent horizontal scrolling */
+        }
+
+        nav {
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            width: calc(100% - 40px);
+            /* Set width with padding */
+            margin: 0 auto;
+            /* Center align the menu */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav a {
+            color: #000;
+            /* Change text color */
+            text-decoration: none;
+            font-size: 18px;
+            /* Decreased font size */
+            font-weight: bold;
+            /* Added bold font weight */
+            margin: 0 15px;
+            /* Decrease margin */
+        }
+
+        nav button.cta {
+            background-color: #d393d9;
+            /* Updated button background color */
+            color: #fff;
+            /* Button text color */
+            border: none;
+            padding: 16px 32px;
+            /* Increased button padding */
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-size: 18px;
+            /* Increased button font size */
+            border-radius: 10px;
+            /* Added border-radius */
+            margin-right: 10px;
+            /* Added margin to the right */
+        }
+
+        nav button.cta:hover {
+            background-color: #e5c8e6;
+            /* Button background color on hover */
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .product {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .product-item {
+            width: 300px;
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            text-align: center;
+            background-color: #fff;
+            /* Background color for product items */
+        }
+
+        .cta {
+            background-color: #d393d9;
+            /* Updated button background color */
+            color: #fff;
+            /* Button text color */
+            border: none;
+            padding: 16px 32px;
+            /* Increased button padding */
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-size: 18px;
+            /* Increased button font size */
+            border-radius: 10px;
+            /* Added border-radius */
+            margin-right: 10px;
+            /* Added margin to the right */
+        }
+
+        .cta:hover {
+            background-color: #e5c8e6;
+            /* Button background color on hover */
+        }
+
+        .banner {
+            background-image: url('https://img.freepik.com/free-photo/flat-lay-frame-with-baby-word-milk-cereals_23-2148298167.jpg?t=st=1711845547~exp=1711849147~hmac=c377865a064a04b8c2bd4055813e8cf97047c468ddbeb97f09e5cdb29d1a54fb&w=1380');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            text-align: center;
+            padding-right: 20%;
+            /* Add some padding to center the content */
+            overflow: hidden;
+            /* Hide overflow content */
+        }
+
+        .banner-text {
+            color: #fff;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .banner-text-line {
+            line-height: 1.2;
+            /* Adjusting line height */
+        }
+
+        .logo {
+            max-width: 80px;
+            /* Adjusted logo size */
+            margin-left: 10px;
+            /* Add some margin to the left */
+        }
+    </style>
+    <style>
+        .footer-columns {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .footer-column {
+            width: 30%;
+            /* Equal width for all columns */
+            display: flex;
+            /* Use flexbox to make columns the same height */
+            flex-direction: column;
+            /* Stack items vertically */
+        }
+
+        .footer-contact,
+        .footer-collections,
+        .footer-about-us {
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #e5c8e6;
+            /* Second color */
+            flex-grow: 1;
+            /* Allow columns to grow to fill available space */
+            line-height: 1.5;
+            /* Set uniform line height for all columns */
+        }
+
+        .footer-contact h3,
+        .footer-collections h3,
+        .footer-about-us h3 {
+            text-align: center;
+            /* Center align the title */
+            margin-bottom: 10px;
+        }
+
+        .footer-about-us {
+            text-align: center;
+            /* Center align the paragraph */
+        }
+
+        .footer-collections ul {
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+        }
+
+        .footer-collections li {
+            margin-bottom: 8px;
+            /* Maintain space between lines */
+            line-height: 1;
+            /* Set line height for items in Collections */
+        }
+
+        .footer-link {
+            text-decoration: none;
+            /* Remove underline from links */
+            color: inherit;
+            /* Inherit color from parent */
+            display: block;
+            /* Make the link fill the entire list item */
+            padding: 5px 0;
+            /* Add some padding to make the clickable area larger */
+        }
+
+        .footer-link:hover {
+            text-decoration: underline;
+            /* Underline on hover */
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <img src="https://i.ibb.co/VS5zq9V/feet-4405907.png" alt="Logo" class="logo"> <!-- Provided logo image -->
+        <div>
+            <a href="#">Home</a>
+            <a href="#">Shop</a>
+            <a href="#">About Us</a>
+            <button class="cta">Contact</button> <!-- Changed "Contact" link to button -->
+        </div>
+    </nav>
+    <div class="banner">
+        <div>
+            <div class="banner-text">
+                <div class="banner-text-line">Discover Our Adorable</div>
+                <div class="banner-text-line">Baby Clothes Collection</div>
+            </div>
+            <button class="cta">Shop Now</button>
+        </div>
+    </div>
+    <div class="container">
+        <h2>Featured Products</h2>
+        <div class="product">
+            <div class="product-item">
+                <img src="https://img.freepik.com/free-photo/beautiful-little-boy-sitting-by-window_1304-5647.jpg?w=1060&t=st=1711842381~exp=1711842981~hmac=d20e1eea829f98ea9a1351cbd736b62334a4e5630a8266a0baa604ae9da59de9"
+                    alt="Baby Romper" style="width: 100%; height: 300px; object-fit: cover;">
+                <h3>Baby Romper</h3>
+                <p>$19.99</p>
+                <button class="cta">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="https://img.freepik.com/free-photo/shot-cute-baby-girl-looking-camera_329181-19580.jpg?w=1060&t=st=1711842451~exp=1711843051~hmac=1b937ec7ec6148360c5ef815bc5c8116b50935ba8b74911409a0217dbbbd5491"
+                    alt="Baby Onesie" style="width: 100%; height: 300px; object-fit: cover;">
+                <h3>Baby Onesie</h3>
+                <p>$14.99</p>
+                <button class="cta">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="https://img.freepik.com/free-photo/full-shot-cute-baby-laying-bed_23-2150227196.jpg?w=1060&t=st=1711842476~exp=1711843076~hmac=0f64c0cf70550aa6333211aac6c9a0b0d4aabecdf11d14b5ba0e536c33998d77"
+                    alt="Baby Dress" style="width: 100%; height: 300px; object-fit: cover;">
+                <h3>Baby Dress</h3>
+                <p>$24.99</p>
+                <button class="cta">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+</body>
+<section style="background-color: #d393d9;">
+    <footer>
+        <div class="container">
+            <div class="footer-columns">
+                <div class="footer-column">
+                    <div class="footer-contact">
+                        <h3>Contact Information</h3>
+                        <a href="#" class="footer-link">
+                            <p>Phone: +971569487065</p>
+                        </a>
+                        <a href="#" class="footer-link">
+                            <p>Email: fouadebrahem97@gmail.com</p>
+                        </a>
+                        <a href="#" class="footer-link">
+                            <p>Address: Al Barsha 1, Dubai, UAE</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <div class="footer-collections">
+                        <h3>Collections</h3>
+                        <ul>
+                            <li><a href="#" class="footer-link">Diaper Changing Kit</a></li>
+                            <li><a href="#" class="footer-link">Nursing Essentials Set</a></li>
+                            <li><a href="#" class="footer-link">Baby Bath Time Bundle</a></li>
+                            <li><a href="#" class="footer-link">Swaddle Blanket Collection</a></li>
+                            <li><a href="#" class="footer-link">Infant Feeding Starter Pack</a></li>
+                            <li><a href="#" class="footer-link">Nursery Organization Kit</a></li>
+                            <li><a href="#" class="footer-link">Baby Clothing Basics Set</a></li>
+                            <li><a href="#" class="footer-link">Baby Travel Gear Bundle</a></li>
+                            <li><a href="#" class="footer-link">Teething Relief Kit</a></li>
+                            <li><a href="#" class="footer-link">Infant Health & Safety Essentials</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <div class="footer-about-us">
+                        <h3>About Us</h3>
+                        <p>Welcome to our baby clothes store! We're dedicated to providing adorable and high-quality
+                            clothing and essentials for your little ones. With a passion for style and comfort, we aim
+                            to make dressing your baby a joyous experience. Explore our collections and discover the
+                            perfect outfits for every occasion.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</section>
+
+</html>
